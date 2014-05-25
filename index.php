@@ -15,6 +15,7 @@
  * Root directory of Drupal installation.
  */
 
+// I just wamt to check git changes
 
 
 define('DRUPAL_ROOT', getcwd());
