@@ -36,8 +36,6 @@ function trails_init()
 
 function trails_permission()
 {
-    $s = 1;
-    ++$s;
     return array
     (
         "administer trails" => array
@@ -46,8 +44,6 @@ function trails_permission()
             "description" => t("Add one more permission")
         ),
         
-
-        
         "access trails" => array
         (
             "title" => t("Access trails blocks"),
@@ -55,3 +51,34 @@ function trails_permission()
         )
     );
 }
+
+function trails_menu()
+{
+    return array
+    (
+        "title" => "Trails  menu",
+        "description" => "Trails module menu ",
+        "page callback" => "drupal_get_form",
+        "page arguments" => "add function HERE",
+        "page access" => array("administer trails"),
+        "file" => "add the file name",
+        "file path" => drupal_get_path("module", "04_trails")
+    );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
