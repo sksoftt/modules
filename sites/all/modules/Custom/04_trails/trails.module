@@ -54,16 +54,18 @@ function trails_permission()
 
 function trails_menu()
 {
-    return array
+    
+    $items["admin/config/trails"] = array
     (
         "title" => "Trails  menu",
         "description" => "Trails module menu ",
         "page callback" => "drupal_get_form",
-        "page arguments" => "add function HERE",
-        "page access" => array("administer trails"),
-        "file" => "add the file name",
-        "file path" => drupal_get_path("module", "04_trails")
+        "page arguments" => "trails_make_admin_menu_form",
+        "access arguments" => array("administer trails"),
+        "file" => "trails.admin.inc",
+        "file path" => drupal_get_path("module", "trails")
     );
+    return $items;
 }
 
 
